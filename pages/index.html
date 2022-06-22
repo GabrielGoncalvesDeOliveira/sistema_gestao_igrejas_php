@@ -1,0 +1,85 @@
+<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Login page to access ChurchWeOn">
+    <meta name="author" content="Gabriel Gonçalves de Oliveira">
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/chess-king-256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+    <title>ChurchWeOn</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="had-container">
+
+        <div class="parallax-container logueo">
+            <div class="parallax"><img src="./imagens/FEMA1.png"></div> <!-- ALTERAR IMAGEM -->
+            <div class="row"><br>
+                <div class="col m8 s8 offset-m2 offset-s2 center">
+                    <h4 class="truncate bg-card-user">
+                        <img src="./imagens/fema.png" alt="Imagem da 2ª Igreja do Evangelho Quadrangular" class="circle responsive-img"> <!-- ALTERAR IMAGEM -->
+                        <div class="row login">
+                            <h4>Página de Acesso ao Sistema ChurchWeOn</h4>
+                            <form method="post" action="/validations/login.php" class="col s12">
+                                <div class="row">
+                                    <div class="input-field col m12 s12">
+                                        <i class="material-icons iconis prefix">account_box</i>
+                                        <input id="icon_prefix" type="text" name="user" class="validate">
+                                        <label for="icon_prefix">Nome ou email do Usuário</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col m12 s12">
+                                        <i class="material-icons iconis prefix">enhanced_encryption</i>
+                                        <input id="password" type="password" name="password" class="validate">
+                                        <label for="password">Senha</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Acessar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="mySpxript.js"></script>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.button-collapse').sideNav({
+            menuWidth: 300, 
+            edge: 'left',
+            closeOnClick: true,
+            draggable: true, 
+            onOpen: function (el) { },
+            onClose: function (el) { },
+        }
+        );
+        $('.parallax').parallax();
+    });
+</script>

@@ -1,8 +1,9 @@
 <?php
+// AJUSTAR ESSA CLASSE
     session_start();
 
     unset($_SESSION['login']);
     unset($_SESSION['password']);
 
-    Header("location:index.html");
+    Header("location:pages/index.html");
 ?>
