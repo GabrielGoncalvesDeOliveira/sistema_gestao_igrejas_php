@@ -1,9 +1,9 @@
 <?php
    include '/components/menu.php'; 
    include '/database/conexao.php';
-   $sql = "select * from igreja order by denominacao;";
+   $sql = "select * from membro order by nome;";
    $pdo = conexao::conectar(); 
-   $listaIgrejas = $pdo->query($sql); 
+   $listaMembros = $pdo->query($sql); 
 ?>
 
 <!DOCTYPE html>
@@ -20,58 +20,57 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Igrejas</title>
+    <title>Membros</title>
 </head>
 
 <body>
     <div class="container deep-orange lighten-5">
         <div class="card-panel grey darken-1">
-            <H1>Igrejas</H1>
+            <H1>Membros</H1>
         </div>
 
         <div class="col s10">
             <table class="striped blue lighten-4">
                 <tr>
-                    <th>codigo</th>
-                    <th>Denominação</th>
-                    <th>CNPJ</th>
-                    <th>Endereço</th>
-                    <th>Contato</th>
+                    <th>Id</th>
+                    <th>Nome</th>
                     <th>Email</th>
+                    <th>Contato</th>
+                    <th>Endereco</th>
+                    <th>Data nascimento</th>
                     <th class="center">Funções</th>
                     <th>
                         <a class="btn-floating btn-small waves-effect waves-light green"
-                            onclick="JavaScript:location.href='formCadastroIgejas.php'">
+                            onclick="JavaScript:location.href='formCadastroMembros.php'">
                             <i class="material-icons">add</i>
                         </a>
                     </th>
                 </tr>
                 <?php 
-           foreach($listaIgrejas as $igreja) {
-        ?>
+                    foreach($listaMembros as $membro) {
+                ?>
                 <tr>
-                    <td><?php echo $igreja['id']?> </td>
-                    <td><?php echo $igreja['denominacao']?> </td>
-                    <td><?php echo $igreja['cnpj']?> </td>
-                    <td><?php echo $igreja['endereco']?> </td>
-                    <td><?php echo $igreja['contato']?> </td>
-                    <td><?php echo $igreja['email']?> </td>
+                    <td><?php echo $membro['id_membro']?> </td>
+                    <td><?php echo $membro['nome']?> </td>
+                    <td><?php echo $membro['email']?> </td>
+                    <td><?php echo $membro['contato']?> </td>
+                    <td><?php echo $membro['endereco']?> </td>
+                    <td><?php echo $membro['data_nascimento']?> </td>
                     <td class="center">
-                        <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdicaoIgrejas.php?id=' + 
-                           <?php echo $igreja['id'];?>">
+                        <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdicaoMembros.php?id=' + 
+                           <?php echo $membro['id_membro'];?>">
                             <i class="material-icons">edit</i>
                         </a>
                         <a class="btn-floating btn-small waves-effect waves-light red"
-                            onclick="JavaScript:remover(<?php echo $igreja['id'];?>)">
+                            onclick="JavaScript:remover(<?php echo $membro['id_membro'];?>)">
                             <i class="material-icons">delete</i>
                         </a>
-                        <a class="btn-floating btn-small waves-effect waves-light  light-blue darken-3" onclick="JavaScript:location.href='formInfoIgreja.php?id=' + 
-                           <?php echo $igreja['id'];?>">
+                        <a class="btn-floating btn-small waves-effect waves-light  light-blue darken-3" onclick="JavaScript:location.href='formInfoMembro.php?id=' + 
+                           <?php echo $membro['id_membro'];?>">
                             <i class="material-icons">info</i>
                         </a>
                     </td>
-                    <td></td>
-                </tr>
+                    </tr>
                 <?php } ?>
             </table>
         </div>
@@ -83,12 +82,12 @@
 
 </html>
 
-<?php include 'footer.php'?> 
+<?php include '/components/footer.php'?> 
 
 <script>
 function remover(id) {
-    if (confirm('Deseja excluir a igreja ' + id + '?')) {
-        location.href = 'removerIgreja.php?id=' + id;
+    if (confirm('Deseja excluir o membro ' + id + '?')) {
+        location.href = 'removerMembro.php?id=' + id;
     }
 }
 </script>
