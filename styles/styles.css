@@ -9,6 +9,15 @@ section {
     margin: 0 auto;
 }
 
+table {
+    margin-top: 1 rem;
+    margin-bottom: 3 rem;
+}
+
+h1 {
+    text-align: center;
+}
+
 h3, h4, h5 {
     color: black;
     text-align: center;
@@ -19,6 +28,12 @@ p {
     line-height: 25px;
     font-size: 15px;
     font-family: Verdana, Tahoma, sans-serif;
+}
+
+.card-panel {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
 }
 
 .container {
@@ -35,12 +50,6 @@ p {
 .child {
     width: 20%;
     height: 100%;
-}
-
-title {
-    display: block;
-    line-height: 32px;
-    margin-bottom: 8px;
 }
 
 .card .card-title {

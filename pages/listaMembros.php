@@ -1,6 +1,6 @@
 <?php
-   include '../components/menu.php'; 
-   include '../database/conexao.php';
+   include './../components/navbar.php'; 
+   include './../database/conexao.php';
    $sql = "select * from membro order by nome;";
    $pdo = conexao::conectar(); 
    $listaMembros = $pdo->query($sql); 
@@ -20,14 +20,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Membros</title>
+    <title>ChurchWeOn</title>
 </head>
 
 <body>
-    <div class="container deep-orange lighten-5">
-        <div class="card-panel grey darken-1">
-            <H1>Membros</H1>
+    <div class="deep-orange lighten-5">
+        <!-- <div class="container card-panel grey darken-1"> -->
+            <h1>Membros - <a class="btn-floating btn-big waves-effect waves-light green"
+                onclick="JavaScript:location.href='formCadastroMembros.php'">
+                <i class="material-icons">add</i>
+            </a></h1>
         </div>
 
         <div class="col s10">
@@ -40,12 +42,6 @@
                     <th>Endereco</th>
                     <th>Data nascimento</th>
                     <th class="center">Funções</th>
-                    <th>
-                        <a class="btn-floating btn-small waves-effect waves-light green"
-                            onclick="JavaScript:location.href='formCadastroMembros.php'">
-                            <i class="material-icons">add</i>
-                        </a>
-                    </th>
                 </tr>
                 <?php 
                     foreach($listaMembros as $membro) {
@@ -74,16 +70,14 @@
                     </tr>
                 <?php } ?>
             </table>
-        </div>
-        <br>
-        <br>
+        <!-- </div> -->
     </div>
 
 </body>
 
 </html>
 
-<?php include '../components/footer.php'?> 
+<?php include './../components/footer.php'?> 
 <!--
 <script>
 function remover(id) {

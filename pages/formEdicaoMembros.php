@@ -1,9 +1,9 @@
 <?php 
-    include '../components/menu.php'; 
+    include '../components/navbar.php'; 
     
-    $id = $_GET['id_membro']; 
+    $id = $_GET['id']; 
 
-    include 'conexao.php';
+    include '../database/conexao.php';
     $sql = "select * from membro where id_membro=?;";
     $pdo = Conexao::conectar(); 
     $query = $pdo->prepare($sql);
@@ -27,7 +27,7 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <title>Editar Dados do Membro</title>
+    <title>ChurchWeOn</title>
 </head>
 <body>
     <div class= "container brown lighten-4  black-text col s12">
@@ -94,9 +94,6 @@
                     <br>
                     <button class="btn waves-effect waves-light green" type="submit" >Salvar
                         <i class="material-icons right">save</i>
-                    </button>
-                    <button class="btn waves-effect waves-light red" type="reset" >Limpar
-                        <i class="material-icons right">brush</i>
                     </button>
 
                     <button class="btn waves-effect waves-light  indigo darken-4" 

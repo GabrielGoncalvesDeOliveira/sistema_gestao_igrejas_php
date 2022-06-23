@@ -75,21 +75,21 @@
                             <label for="lblIgreja" class="black-text">Igreja: </label>
                             <input placeholder="2ª IEQ Assis" id="txt_igreja" name="txtIgreja" type="text">
                         </div>
-                         <div class="input-field col s6">
-                            <br>
-                            <button class="btn waves-effect waves-light green" type="submit">Cadastrar
-                                <i class="material-icons right">save</i>
-                            </button>
-                            <button class="btn waves-effect waves-light red" type="reset">Limpar
-                                <i class="material-icons right">brush</i>
-                            </button>
+                    </div>
+                    <div class="input-field col s6">
+                        <br>
+                        <button class="btn waves-effect waves-light green" type="submit">Cadastrar
+                            <i class="material-icons right">save</i>
+                        </button>
+                        
+                        <button class="btn waves-effect waves-light red" type="reset">Limpar
+                            <i class="material-icons right">brush</i>
+                        </button>
 
-                            <button class="btn waves-effect waves-light  indigo darken-4" type="button" id="btnVoltar"
-                                onclick="JavaScript:location.href='listaMembros.php'">Voltar 
-                                <i class="material-icons right">arrow_back</i>
-                            </button>
-
-                        </div>
+                        <button class="btn waves-effect waves-light  indigo darken-4" type="button" id="btnVoltar"
+                            onclick="JavaScript:location.href='listaMembros.php'">Voltar 
+                            <i class="material-icons right">arrow_back</i>
+                        </button>
                     </div>
                 </form>
 

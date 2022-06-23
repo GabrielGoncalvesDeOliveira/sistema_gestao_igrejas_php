@@ -18,5 +18,5 @@
         $_SESSION['password'] = $dados['password'];
         header("location:../components/menu.php");
     } 
-    else header("location:../pages/index.html");
+    else header("location:../index.html");
 ?>
