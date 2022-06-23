@@ -1,11 +1,10 @@
 <?php
-    // AJUSTAR ESSA CLASSE
-    $login = trim($_POST['user'])
+    $login = trim($_POST['user']);
     $password = trim($_POST['password']);
 
-    include '/database/conexao.php';
-    
-    $sql = "select * from usuario where login like ?";
+    include '../database/conexao.php';
+
+    $sql = "select * from usuario where login = ?;";
     $pdo = Conexao::conectar();
     $query = $pdo->prepare($sql);
     $query->execute(array($login));
@@ -17,7 +16,7 @@
         session_start();
         $_SESSION['login'] = $dados['login'];
         $_SESSION['password'] = $dados['password'];
-        header("location:/components/menu.php");
+        header("location:../components/menu.php");
     } 
-    else header("location:/pages/index.html");
+    else header("location:../pages/index.html");
 ?>

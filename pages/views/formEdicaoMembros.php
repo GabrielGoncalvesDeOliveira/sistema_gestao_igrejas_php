@@ -1,5 +1,5 @@
 <?php 
-    include 'components/menu.php'; 
+    include '../components/menu.php'; 
     
     $id = $_GET['id_membro']; 
 
@@ -20,10 +20,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/chess-king-256.png">
 
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -101,8 +100,8 @@
                     </button>
 
                     <button class="btn waves-effect waves-light  indigo darken-4" 
-                    type="button" id="btnVoltar" onclick="JavaScript:location.href='listaMembros.php'">
-                    Voltar <i class="material-icons right">arrow_back</i> 
+                        type="button" id="btnVoltar" onclick="JavaScript:location.href='listaMembros.php'">Voltar
+                        <i class="material-icons right">arrow_back</i> 
                     </button>
                     
                 </div>

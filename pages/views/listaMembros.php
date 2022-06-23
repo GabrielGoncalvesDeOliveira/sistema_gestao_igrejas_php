@@ -1,6 +1,6 @@
 <?php
-   include '/components/menu.php'; 
-   include '/database/conexao.php';
+   include '../components/menu.php'; 
+   include '../database/conexao.php';
    $sql = "select * from membro order by nome;";
    $pdo = conexao::conectar(); 
    $listaMembros = $pdo->query($sql); 
@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/chess-king-256.png">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -82,12 +83,12 @@
 
 </html>
 
-<?php include '/components/footer.php'?> 
-
+<?php include '../components/footer.php'?> 
+<!--
 <script>
 function remover(id) {
     if (confirm('Deseja excluir o membro ' + id + '?')) {
         location.href = 'removerMembro.php?id=' + id;
     }
 }
-</script>
+</script> -->

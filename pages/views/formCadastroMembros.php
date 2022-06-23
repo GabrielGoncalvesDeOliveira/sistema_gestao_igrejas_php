@@ -85,8 +85,8 @@
                             </button>
 
                             <button class="btn waves-effect waves-light  indigo darken-4" type="button" id="btnVoltar"
-                                onclick="JavaScript:location.href='listaMembros.php'">
-                                Voltar <i class="material-icons right">arrow_back</i>
+                                onclick="JavaScript:location.href='listaMembros.php'">Voltar 
+                                <i class="material-icons right">arrow_back</i>
                             </button>
 
                         </div>
