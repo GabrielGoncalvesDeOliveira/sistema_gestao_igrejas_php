@@ -52,11 +52,11 @@
             <div class="child">
                 <div class="card grey darken-3">
                     <div class="card-content white-text">
-                        <span class="card-title">Atividades <i class="material-icons right">today</i></span>
-                        <p>Deseja conferir a programação de sua igreja, adicionar um novo culto, célula ou atividade? Confira mais detalhes.</p>
+                        <span class="card-title">Família<i class="material-icons right">people</i></span>
+                        <p>Gostaria de adicionar uma família e novos membros a ela? Acesse aqui, pois você está no lugar certo!</p>
                     </div>
                     <button class="btn waves-effect waves-light light-blue darken-4" type="button" id="btnMembro"
-                        onclick="JavaScript:location.href='../pages/listaMembros.php'">Ver mais
+                        onclick="JavaScript:location.href='../pages/listaFamilias.php'">Ver mais
                     </button>
                 </div>
             </div>
@@ -64,14 +64,14 @@
             <div class="child">
                 <div class="card grey darken-3">
                     <div class="card-content white-text">
-                        <span class="card-title">Família<i class="material-icons right">people</i></span>
-                        <p>Gostaria de adicionar uma família e novos membros a ela? Acesse aqui, pois você está no lugar certo!</p>
+                        <span class="card-title">Atividades <i class="material-icons right">today</i></span>
+                        <p>Deseja conferir a programação de sua igreja, adicionar um novo culto, célula ou atividade? Confira mais detalhes.</p>
                     </div>
                     <button class="btn waves-effect waves-light light-blue darken-4" type="button" id="btnMembro"
-                        onclick="JavaScript:location.href='../pages/listaMembros.php'">Ver mais
+                        onclick="JavaScript:location.href='../pages/listaAtividades.php'">Ver mais
                     </button>
                 </div>
-            </div>
+            </div>            
         </div>
     </section>
     <section>

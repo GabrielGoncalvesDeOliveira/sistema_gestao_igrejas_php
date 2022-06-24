@@ -27,7 +27,7 @@
                 <form action="../services/inserirAtividade.php" method="post" id="formCadastroAtividade" class="col s12" required>
                     <div class="col s11">
                         <div class="input-field col s8">
-                            <label for="lblDescricao" class="black-text">Informe o nome da família: </label>
+                            <label for="lblDescricao" class="black-text">Informe a descrição da atividade: </label>
                             <input placeholder="Culto de domingo de Santa Ceia ..." id="txt_descricao" name="txtDescricao" type="text" required>
                         </div>
                         <div class="input-field col s2">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="input-field col s2">
                             <label for="lblNome" class="black-text">Informe o horário: </label>
-                            <input placeholder="18:30" id="txt_hora" name="txtHora" type="time" required>
+                            <input placeholder="" id="txt_hora" name="txtHora" type="time" required>
                         </div>
                         <div class="input-field col s8">
                             <label for="lblLocal" class="black-text">Informe o local da atividade: </label>

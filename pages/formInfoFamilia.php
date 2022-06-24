@@ -34,13 +34,13 @@
             <h1>Detalhes da família</h1>
         </div>
         <div class="container">
-            <div class="input-field col s2">
+            <div class="input-field col s10">
                 <label for="lblid" class="black-text">Id: <?php echo $dados['id'];?></label>
                     <br />
                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
             </div>
             <div class="row">
-                <div class="input-field col s8">
+                <div class="input-field col s10">
                     <label for="lblNome">
                         <h5><b>Nome da família: </b><?php echo $dados['nome'];?></h5>
                     </label>
