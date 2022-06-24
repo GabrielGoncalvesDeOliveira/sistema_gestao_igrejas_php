@@ -41,6 +41,7 @@
                     <th>Contato</th>
                     <th>Endereco</th>
                     <th>Data nascimento</th>
+                    <th>Familia</th>
                     <th class="center">Funções</th>
                 </tr>
                 <?php 
@@ -53,6 +54,7 @@
                     <td><?php echo $membro['contato']?> </td>
                     <td><?php echo $membro['endereco']?> </td>
                     <td><?php echo $membro['data_nascimento']?> </td>
+                    <td><?php echo $membro['familia']?> </td>
                     <td class="center">
                         <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdicaoMembros.php?id=' + 
                            <?php echo $membro['id_membro'];?>">
@@ -77,7 +79,7 @@
 
 </html>
 
-<?php include './../components/footer.php'?> 
+<?php include '../components/footer.php'?> 
 <!--
 <script>
 function remover(id) {

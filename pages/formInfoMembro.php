@@ -64,13 +64,6 @@
             </div>
             <div class="row">
                 <div class="input-field col s4">
-                    <label for="lblCpf">
-                        <h5><b>CPF: </b><?php echo $dados['cpf'];?></h5>
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s4">
                     <label for="lblDataNascimento">
                         <h5><b>Data de nascimento: </b><?php echo $dados['data_nascimento'];?></h5>
                     </label>
@@ -84,44 +77,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s2">
-                    <label for="lblBatizado">
-                        <h5><b>Batizado: </b><?php echo $dados['batizado'];?></h5>
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s4">
-                    <label for="lblMembroDesde">
-                        <h5><b>Membro desde: </b><?php echo $dados['membro_desde'];?></h5>
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s4">
-                    <label for="lblNaacionalidade">
-                        <h5><b>Nacionalidade: </b><?php echo $dados['nacionalidade'];?></h5>
-                    </label>
-                </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s6">
                     <label for="lblFamilia">
                         <h5><b>Familia: </b><?php echo $dados['familia'];?></h5>
                     </label>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <label for="lblIgreja">
-                        <h5><b>Igreja: </b><?php echo $dados['igreja'];?></h5>
-                    </label>
-                </div>
-            </div>
 
             <br><br>
             <div class="row">
-                <a class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='formEdicaoMembro.php?id_membro=' + 
+                <a class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='formEdicaoMembro.php?id=' + 
                     <?php echo $dados['id_membro'];?>">
                     <i class="material-icons right">edit</i>Editar</a>
 
