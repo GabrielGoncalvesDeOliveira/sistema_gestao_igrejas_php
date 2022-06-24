@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
     include '../database/conexao.php';
-    $sql = "select * from familia where id=?;";
+    $sql = "select * from igreja where id=?;";
     $pdo = Conexao::conectar(); 
     $query = $pdo->prepare($sql);
     $query->execute (array($id));
@@ -33,18 +33,26 @@
 <body>
 <div class= "container brown lighten-4  black-text col s12">
         <div class = "brown lighten-2 col s12">
-            <h1>Editar Família</h1>
+            <h1>Editar Igreja</h1>
         </div>
         <div class="row">
-            <form action="../services/editarFamilia.php" method="post" id="formEdicaoFamilia" class="col s12" required>
+            <form action="../services/editarIgreja.php" method="post" id="formEdicaoIgreja" class="col s12" required>
                 <div class="input-field col s2">
                     <label for="lblId" class="black-text" >ID: <?php echo $dados['id'];?></label>
                     <br/>
                     <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
                 </div>
                 <div class="input-field col s8">
-                    <label for="lblNome" class="black-text">Nome da família: </label> 
-                    <input placeholder="" id="txt_nome" name="txtNome" value="<?php echo $dados['nome']?>" type="text" required>
+                    <label for="lblDenominacao" class="black-text">Denominacao: </label> 
+                    <input placeholder="" id="txt_denominacao" name="txtDenominacao" value="<?php echo $dados['denominacao']?>" type="text" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="lblEndereco" class="black-text">Endereco: </label> 
+                    <input placeholder="" id="txt_endereco" name="txtEndereco" value="<?php echo $dados['endereco']?>" type="text" required>
+                </div>
+                <div class="input-field col s4">
+                    <label for="lblContato" class="black-text">Contato: </label> 
+                    <input placeholder="" id="txt_contato" name="txtContato" value="<?php echo $dados['contato']?>" type="text" required>
                 </div>
 
                 <div class = "input-field col s8">
@@ -53,8 +61,8 @@
                         <i class="material-icons right">save</i>
                     </button>
 
-                    <button class="btn waves-effect waves-light  indigo darken-4" 
-                        type="button" id="btnVoltar" onclick="JavaScript:location.href='listaFamilias.php'">Voltar
+                    <button class="btn waves-effect waves-light indigo darken-4" 
+                        type="button" id="btnVoltar" onclick="JavaScript:location.href='listaIgrejas.php'">Voltar
                         <i class="material-icons right">arrow_back</i> 
                     </button>
                     

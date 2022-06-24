@@ -31,6 +31,7 @@
              <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="../validations/logout.php">Logout</a></li>
                 <li><a href="../pages/imagensChurch.php">Imagens</a></li>
+                <li><a href="../pages/listaIgrejas.php">Igrejas</a></li>
                 <li><a href="../pages/listaMembros.php">Membros</a></li>
                 <li><a href="../pages/listaFamilias.php">Famílias</a></li>
                 <li><a href="../pages/listaAtividades.php">Atividades</a></li>
