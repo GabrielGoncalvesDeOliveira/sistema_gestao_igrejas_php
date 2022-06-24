@@ -72,3 +72,5 @@ function remover(id) {
     }
 }
 </script>
+
+<?php include '../components/footer.php'?>

@@ -110,3 +110,5 @@ $(document).ready(function() {
     $('select').material_select();
 });
 </script>
+
+<?php include '../components/footer.php'?>

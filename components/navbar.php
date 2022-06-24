@@ -27,13 +27,14 @@
 <body>
     <nav>
         <div class="nav-wrapper light-blue darken-4">
-            <a href="#" class="brand-logo right"><img src="https://cdn-icons-png.flaticon.com/512/32/32457.png" width="75"></a>
+            <a href="#" class="brand-logo right"><img src="https://cdn-icons-png.flaticon.com/512/32/32457.png" width="65"></a>
              <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="../validations/logout.php">Logout</a></li>
+                <li><a href="../pages/imagensChurch.php">Imagens</a></li>
                 <li><a href="../pages/listaMembros.php">Membros</a></li>
                 <li><a href="../pages/listaFamilias.php">Famílias</a></li>
                 <li><a href="../pages/listaAtividades.php">Atividades</a></li>
-                <li><a href="../components/menu.php">Menu</a></li>
+                <li><a href="../components/menu.php">Início</a></li>
             </ul> 
         </div>
     </nav>

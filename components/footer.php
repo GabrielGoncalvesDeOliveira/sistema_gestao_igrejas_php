@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 <body>
-    <footer class="page-footer">
+    <footer class="page-footer" style="margin-top: 5rem;">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Alguma dúvida? Entre em contato comigo:</h5>
