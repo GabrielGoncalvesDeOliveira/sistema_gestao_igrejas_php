@@ -40,7 +40,7 @@
             <div class="child">
                 <div class="card grey darken-3">
                     <div class="card-content white-text">
-                        <span class="card-title">Membros <i class="material-icons right">people</i></span>
+                        <span class="card-title">Membros <i class="material-icons right">person</i></span>
                         <p>Quer saber mais informações sobre seus membros ou deseja cadastrar um novo? Está no lugar certo!</p>
                     </div>
                     <button class="btn waves-effect waves-light light-blue darken-4" type="button" id="btnMembro"
@@ -64,8 +64,8 @@
             <div class="child">
                 <div class="card grey darken-3">
                     <div class="card-content white-text">
-                        <span class="card-title">Escola Bíblica <i class="material-icons right">school</i></span>
-                        <p>Gostaria de adicionar uma classe, um novo aluno ou controlar a frequência geral em um único lugar? Acesse aqui.</p>
+                        <span class="card-title">Família<i class="material-icons right">people</i></span>
+                        <p>Gostaria de adicionar uma família e novos membros a ela? Acesse aqui, pois você está no lugar certo!</p>
                     </div>
                     <button class="btn waves-effect waves-light light-blue darken-4" type="button" id="btnMembro"
                         onclick="JavaScript:location.href='../pages/listaMembros.php'">Ver mais

@@ -4,11 +4,14 @@
    $id = $_GET['id']; 
 
    include '../database/conexao.php';
-   $sql = "select * from membro where id_membro = ?;";
+   $sql = "select * from membro where id = ?;";
    $pdo = Conexao::conectar(); 
    $query = $pdo->prepare($sql);
    $query->execute (array($id));
    $dados = $query->fetch(PDO::FETCH_ASSOC);
+
+   $sql = "select * from familia order by nome";
+   $listaFamilia = $pdo->query($sql);
 
    Conexao::desconectar(); 
 ?>
@@ -37,9 +40,9 @@
         </div>
         <div class="container">
             <div class="input-field col s2">
-                <label for="lblid" class="black-text">Id: <?php echo $dados['id_membro'];?></label>
+                <label for="lblid" class="black-text">Id: <?php echo $dados['id'];?></label>
                     <br />
-                <input type="hidden" name="id" id="id_membro" value="<?php echo $id;?>">
+                <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
             </div>
             <div class="row">
                 <div class="input-field col s8">
@@ -79,19 +82,23 @@
             <div class="row">
                 <div class="input-field col s6">
                     <label for="lblFamilia">
-                        <h5><b>Familia: </b><?php echo $dados['familia'];?></h5>
+                        <h5><b>Familia: </b><?php foreach($listaFamilia as $familia) {
+                            if ($familia['id'] == $dados['familia']) {
+                                echo $familia['nome'];
+                            } }?>
+                        </h5>
                     </label>
                 </div>
             </div>
 
             <br><br>
             <div class="row">
-                <a class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='formEdicaoMembro.php?id=' + 
-                    <?php echo $dados['id_membro'];?>">
+                <a class="waves-effect waves-light btn orange" onclick="JavaScript:location.href='formEdicaoMembros.php?id=' + 
+                    <?php echo $dados['id'];?>">
                     <i class="material-icons right">edit</i>Editar</a>
 
                 <a class="waves-effect waves-light btn red"
-                    onclick="JavaScript:remover(<?php echo $dados['id_membro']?>)">
+                    onclick="JavaScript:remover(<?php echo $dados['id']?>)">
                     <i class="material-icons right">delete</i>Remover</a>
 
                 <a class="waves-effect waves-light btn blue" onclick="JavaScript:location.href='listaMembros.php'">
@@ -106,7 +113,7 @@
 <script>
 function remover(id) {
     if (confirm('Deseja excluir o membro ' + id +'?')) {
-        location.href = 'remImovel.php?id_membro=' + id;
+        location.href = '../services/deletarMembro.php?id=' + id;
     }
 }
 </script>

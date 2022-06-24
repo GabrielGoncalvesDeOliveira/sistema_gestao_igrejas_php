@@ -1,9 +1,9 @@
 <?php
    include './../components/navbar.php'; 
    include './../database/conexao.php';
-   $sql = "select * from membro order by nome;";
+   $sql = "select * from familia order by nome;";
    $pdo = conexao::conectar(); 
-   $listaMembros = $pdo->query($sql); 
+   $listaFamilias = $pdo->query($sql); 
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +25,8 @@
 
 <body>
     <div class="deep-orange lighten-5">
-    <h1>Membros - <a class="btn-floating btn-big waves-effect waves-light green"
-            onclick="JavaScript:location.href='formCadastroMembros.php'">
+    <h1>Famílias - <a class="btn-floating btn-big waves-effect waves-light green"
+            onclick="JavaScript:location.href='formCadastroFamilias.php'">
             <i class="material-icons">add</i>
         </a></h1>
     </div>
@@ -36,36 +36,28 @@
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
-                <th>Email</th>
-                <th>Contato</th>
-                <th>Endereco</th>
-                <th>Data nascimento</th>
-                <th>Familia</th>
+                <th>Quantidade de membros</th>
                 <th class="center">Funções</th>
             </tr>
             <?php 
-                foreach($listaMembros as $membro) {
+                foreach($listaFamilias as $familia) {
             ?>
             <tr>
-                <td><?php echo $membro['id']?> </td>
-                <td><?php echo $membro['nome']?> </td>
-                <td><?php echo $membro['email']?> </td>
-                <td><?php echo $membro['contato']?> </td>
-                <td><?php echo $membro['endereco']?> </td>
-                <td><?php echo $membro['data_nascimento']?> </td>
-                <td><?php echo $membro['familia']?></td>
+                <td><?php echo $familia['id']?> </td>
+                <td><?php echo $familia['nome']?> </td>
+                <td><?php echo $familia['qtd_membros']?> </td>
 
                 <td class="center">
-                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdicaoMembros.php?id=' + 
-                        <?php echo $membro['id'];?>">
+                    <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='formEdicaoFamilias.php?id=' + 
+                        <?php echo $familia['id'];?>">
                         <i class="material-icons">edit</i>
                     </a>
                     <a class="btn-floating btn-small waves-effect waves-light red"
-                        onclick="JavaScript:remover(<?php echo $membro['id'];?>)">
+                        onclick="JavaScript:remover(<?php echo $familia['id'];?>)">
                         <i class="material-icons">delete</i>
                     </a>
-                    <a class="btn-floating btn-small waves-effect waves-light  light-blue darken-3" onclick="JavaScript:location.href='formInfoMembro.php?id=' + 
-                        <?php echo $membro['id'];?>">
+                    <a class="btn-floating btn-small waves-effect waves-light  light-blue darken-3" onclick="JavaScript:location.href='formInfoFamilia.php?id=' + 
+                        <?php echo $familia['id'];?>">
                         <i class="material-icons">info</i>
                     </a>
                 </td>
@@ -81,8 +73,8 @@
 <?php include '../components/footer.php'?> 
 <script>
 function remover(id) {
-    if (confirm('Deseja excluir o membro ' + id + '?')) {
-        location.href = '../services/deletarMembro.php?id=' + id;
+    if (confirm('Deseja excluir a família ' + id + '?')) {
+        location.href = '../services/deletarFamilia.php?id=' + id;
     }
 }
 </script>

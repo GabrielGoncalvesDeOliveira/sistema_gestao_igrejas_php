@@ -30,6 +30,7 @@
             <a href="#" class="brand-logo right"><img src="./imagens/casai.png" width="120"></a>
              <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="../pages/listaMembros.php">Membros</a></li>
+                <li><a href="../pages/listaFamilias.php">Famílias</a></li>
             </ul> 
         </div>
     </nav>
